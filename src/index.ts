@@ -5,7 +5,7 @@ const app      = express();
 const port     = process.env.PORT || 3000;
 const cors     = require('cors');
 const corsOption = {
-  origin: ['http://localhost:3000'],
+  origin: "*",
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
 }
