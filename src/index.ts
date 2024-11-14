@@ -66,8 +66,14 @@ app.get('/:shorturl', async(req : Request, res : Response) => {
       }
     });
     if(response){
-      const url =response.longURL;
+
+      if(response.longURL.includes("http")){
+        res.redirect(response.longURL);
+      }else{
+      const url = "https://" + response.longURL;
       res.redirect(url);
+    }
+      
     }else{
       res.status(404).json({
         error: "Not Found"
