@@ -9,7 +9,7 @@ const cors     = require('cors');
 app.use(express.json());
 app.use(cors());
 
-const myURL : string = "https://16.170.253.191:3000";
+const myURL : string = "https://13.61.8.125:3000";
 
 function randomIdgenerator() : number{
     return Math.floor(Math.random() * 10 ** 13);
