@@ -4,10 +4,15 @@ const express  = require('express');
 const app      = express();
 const port     = process.env.PORT || 3000;
 const cors     = require('cors');
+const corsOption = {
+  origin: ['http://localhost:3000'],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}
 
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOption));
 
 const myURL : string = "https://13.61.8.125:3000";
 
