@@ -66,7 +66,7 @@ app.get('/:shorturl', async(req : Request, res : Response) => {
       }
     });
     if(response){
-      const url = "https://" + response.longURL;
+      const url =response.longURL;
       res.redirect(url);
     }else{
       res.status(404).json({
