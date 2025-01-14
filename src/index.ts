@@ -14,7 +14,7 @@ const corsOption = {
 app.use(express.json());
 app.use(cors(corsOption));
 
-const myURL : string = "https://13.61.8.125";
+const myURL : string = "https://13.53.130.71";
 
 function randomIdgenerator() : number{
     return Math.floor(Math.random() * 10 ** 13);
