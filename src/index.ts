@@ -14,7 +14,7 @@ const corsOption = {
 app.use(express.json());
 app.use(cors(corsOption));
 
-const myURL : string = "https://13.53.130.71";
+const myURL : string = "https://16.170.254.133";
 
 function randomIdgenerator() : number{
     return Math.floor(Math.random() * 10 ** 13);
@@ -80,6 +80,12 @@ app.get('/:shorturl', async(req : Request, res : Response) => {
       });
     }
 })
+
+app.get('/', async(req : Request, res : Response) => {
+  res.status(200).json({
+    message: "Welcome to Shortit"
+  });
+});
 
 
 app.listen(port, () => {
