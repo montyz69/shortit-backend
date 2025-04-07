@@ -14,7 +14,7 @@ const corsOption = {
 app.use(express.json());
 app.use(cors(corsOption));
 
-const myURL : string = "https://16.170.254.133";
+const myURL : string = "https://shortit-backend.onrender.com";
 
 function randomIdgenerator() : number{
     return Math.floor(Math.random() * 10 ** 13);
